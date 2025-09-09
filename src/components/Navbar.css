@@ -1,0 +1,50 @@
+.navbar {
+  transition: all 0.4s ease-in-out;
+  padding: 15px 0;
+}
+
+.navbar-trans {
+  background: transparent;
+}
+
+.navbar-reduce {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007a99;
+  transition: color 0.3s;
+}
+
+.navbar .navbar-brand:hover {
+  color: #005f73;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #007a99;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: #333;
+  border-radius: 5px;
+}
