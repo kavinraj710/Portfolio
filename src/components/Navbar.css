@@ -1,0 +1,119 @@
+/* container fixed top-right */
+.menu-container.top-right {
+  position: fixed;
+  top: 20px;
+  right: 22px;
+  z-index: 2200;
+}
+
+/* cosmic menu button */
+.menu-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: radial-gradient(circle at 30% 30%, #ffd47a, #ff7a1a 70%);
+  box-shadow: 0 6px 20px rgba(255, 150, 30, 0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(255, 170, 60, 0.7);
+}
+
+.menu-btn span {
+  width: 22px;
+  height: 3px;
+  background: #061226;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.2s ease;
+}
+
+/* cross animation */
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* the circular menu is absolutely positioned at the button */
+.circular-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  pointer-events: none; /* individual items control pointer-events inline */
+}
+
+/* individual items sit at the button initially and move out via inline transform */
+.circular-menu li {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%); /* start exactly at the menu button */
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 420ms cubic-bezier(.17,.85,.35,1), opacity 300ms ease;
+}
+
+
+.circular-menu li.show {
+  opacity: 1;
+}
+
+/* link appearance - planet style */
+.circular-menu li a {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem; /* bigger icons */
+  color: #fff;
+  background: linear-gradient(135deg, rgba(20,40,90,0.95), rgba(5,12,30,0.9));
+  box-shadow: 0 6px 18px rgba(0, 130, 255, 0.12),
+              inset 0 -6px 12px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.circular-menu li a:hover {
+  transform: scale(1.2) rotate(5deg);
+  background: linear-gradient(135deg, #2fb6ff, #1f58b4);
+  box-shadow: 0 10px 30px rgba(47,182,255,0.25),
+              0 0 18px rgba(47,182,255,0.15);
+  color: #021124;
+}
+
+
+/* small responsive tweak */
+@media (max-width: 600px) {
+  .circular-menu li,
+  .circular-menu li a {
+    width: 48px;
+    height: 48px;
+    font-size: 0.7rem;
+  }
+}

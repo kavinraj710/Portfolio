@@ -1,0 +1,32 @@
+/* Intro.css (or stars.scss) - pair with the component above */
+.intro {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* background already handled inline; but you can add fallback */
+.parallax-bg {
+  transition: transform 0.12s linear; /* small smoothing when mouse stops */
+  transform-origin: center;
+}
+
+/* particles wrapper sits above bg and below content */
+.particles-wrapper {
+  z-index: 3;
+}
+
+/* content is above everything */
+.intro-content {
+  z-index: 5;
+  color: #fff;
+  text-align: center;
+}
+
+/* general responsive tweak: reduce motion on small screens */
+@media (max-width: 768px) {
+  /* reduce effect strength by lowering MAX_OFFSET in JS or use CSS to disable heavy transforms */
+  .parallax-bg {
+    transition: transform 0.18s linear;
+  }
+}

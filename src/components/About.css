@@ -1,0 +1,139 @@
+/* Container for each skill */
+.skill-slide {
+  perspective: 1200px; /* stronger 3D effect */
+  text-align: center;
+  padding: 10px;
+}
+
+/* Flip card container */
+.skill-flip {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 15px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Flip on hover */
+.skill-slide:hover .skill-flip {
+  transform: rotateY(180deg) scale(1.05); /* slight zoom */
+}
+
+/* Front & back sides */
+.skill-front,
+.skill-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s, transform 0.6s ease-in-out;
+}
+
+/* Front side */
+.skill-front {
+  font-size: 2.5rem;
+  color: #fff;
+  transform: rotateY(0deg);
+  background: rgba(0,0,0,0.2); /* subtle overlay for contrast */
+}
+.skill-flip {
+  transition: transform 0.6s ease-in-out, background 0.5s ease;
+}
+.skill-slide:hover .skill-flip {
+  transform: rotateY(180deg) scale(1.08); /* slightly bigger zoom */
+}
+
+/* Back side */
+.skill-back {
+  font-size: 1rem;
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 5px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Add gradient glow on hover */
+.skill-slide:hover .skill-flip {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-flip {
+    width: 80px;
+    height: 80px;
+  }
+  .skill-front {
+    font-size: 2rem;
+  }
+  .skill-back {
+    font-size: 0.9rem;  
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-flip {
+    width: 70px;
+    height: 70px;
+  }
+  .skill-front {
+    font-size: 1.8rem;
+  }
+  .skill-back {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+/* Make top About section taller */
+.top-about-row {
+  padding: 40px 0; /* more vertical space */
+}
+
+.profile-img {
+  width: 200px;  /* bigger profile image */
+  height: 200px;
+}
+
+/* Adjust About text nicely */
+.about-me .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Skills slider stays below */
+.skills-showcase {
+  margin-top: 40px;
+}
+.skills-slider-wrapper {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #61dafb #000;
+}
+
+.skills-slider-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-slider-wrapper::-webkit-scrollbar-thumb {
+  background: #61dafb;
+  border-radius: 4px;
+}
+
+.skills-slider-wrapper::-webkit-scrollbar-track {
+  background: #000;
+}
+
+
