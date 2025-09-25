@@ -8,13 +8,14 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiGrafana, SiBlazor, SiFastapi } from "react-icons/si";
 
-import stock1 from "../img/image2.jpg";
-import stock2 from "../img/image2.jpg";
-import stock3 from "../img/image3.jpg";
-import stock4 from "../img/image4.jpg";
-import stock5 from "../img/image5.jpg";
-import stock6 from "../img/image6.jpg";
 
+import weather1 from "../img/weather1.png";
+
+import todo from "../img/todo.png";
+import blog from "../img/blog.png";
+import classic from "../img/class.png";
+import herbal from "../img/herbal.png";
+import smart from "../img/smart.png";
 const projects = [
   {
     id: 1,
@@ -22,7 +23,7 @@ const projects = [
     tech: [<FaAws />, <FaDocker />, <SiBlazor />, <SiGrafana />, <SiMongodb />],
     description:
       "Task manager with CI/CD pipelines, Docker deployment, and monitoring tools for high performance.",
-    img: stock1,
+    img: todo,
     link: "#",
   },
   {
@@ -31,7 +32,7 @@ const projects = [
     tech: [<SiFastapi />, <FaReact />, <FaAws />],
     description:
       "Verifies uploaded IDs using blur, brightness, and glare checks. Deployed on AWS ECS for scalability.",
-    img: stock2,
+    img: smart,
     link: "#",
   },
   {
@@ -40,7 +41,7 @@ const projects = [
     tech: [<SiMongodb />, <SiBlazor />],
     description:
       "Social blogging platform with media uploads, real-time updates, and follower system.",
-    img: stock3,
+    img: blog,
     link: "#",
   },
   {
@@ -49,7 +50,7 @@ const projects = [
     tech: [<FaUnity />],
     description:
       "Interactive classroom with GPT-4 chatbot, PDF viewer, and collaborative whiteboard.",
-    img: stock4,
+    img: classic,
     link: "#",
   },
   {
@@ -58,7 +59,7 @@ const projects = [
     tech: [<SiBlazor />, <SiMongodb />],
     description:
       "Accurate 14-day forecast with login, location-based updates, and responsive design.",
-    img: stock5,
+    img: weather1,
     link: "#",
   },
   {
@@ -67,7 +68,7 @@ const projects = [
     tech: [<FaUnity />, <FaLeaf />],
     description:
       "Simulation app for learning medicinal plants with interactive modules.",
-    img: stock6,
+    img: herbal,
     link: "#",
   },
 ];
