@@ -24,7 +24,7 @@ const projects = [
     description:
       "Task manager with CI/CD pipelines, Docker deployment, and monitoring tools for high performance.",
     img: todo,
-    link: "#",
+    link: "https://github.com/kavinraj710/ToDo",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const projects = [
     description:
       "Verifies uploaded IDs using blur, brightness, and glare checks. Deployed on AWS ECS for scalability.",
     img: smart,
-    link: "#",
+    link: "https://github.com/kavinraj710/Smart-Id-Validator",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const projects = [
     description:
       "Social blogging platform with media uploads, real-time updates, and follower system.",
     img: blog,
-    link: "#",
+    link: "https://github.com/kavinraj710/My-Blog",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const projects = [
     description:
       "Interactive classroom with GPT-4 chatbot, PDF viewer, and collaborative whiteboard.",
     img: classic,
-    link: "#",
+    link: "https://github.com/kavinraj710/Virtual-Classroom",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const projects = [
     description:
       "Accurate 14-day forecast with login, location-based updates, and responsive design.",
     img: weather1,
-    link: "#",
+    link: "https://github.com/kavinraj710/Weather-MongoAuth",
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const projects = [
     description:
       "Simulation app for learning medicinal plants with interactive modules.",
     img: herbal,
-    link: "#",
+    link: "https://github.com/kavinraj710/Virtual-Herbal",
   },
 ];
 
